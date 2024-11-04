@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Datos Recibidos</title>
+</head>
+<body>
+    <h1>Datos Recibidos de los Formularios</h1>
+
+    <h2>Inscripción en Curso</h2>
+    <ul>
+        {% for dato in datos['inscripcion'] %}
+            <li>Nombre: {{ dato.nombre }}, Apellido: {{ dato.apellido }}, Curso: {{ dato.curso }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Registro de Usuarios</h2>
+    <ul>
+        {% for usuario in datos['usuarios'] %}
+            <li>Nombre: {{ usuario.nombre }}, Apellido: {{ usuario.apellido }}, Correo: {{ usuario.correo }}, Contraseña: {{ usuario.contrasena }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Registro de Productos</h2>
+    <ul>
+        {% for producto in datos['productos'] %}
+            <li>Producto: {{ producto.producto }}, Categoría: {{ producto.categoria }}, Existencia: {{ producto.existencia }}, Precio: {{ producto.precio }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Registro de Libros</h2>
+    <ul>
+        {% for libro in datos['libros'] %}
+            <li>Título: {{ libro.titulo }}, Autor: {{ libro.autor }}, Resumen: {{ libro.resumen }}, Medio: {{ libro.medio }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/">Volver al Menú Principal</a>
+</body>
+</html>

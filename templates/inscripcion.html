@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    {% block content %}
+
+    <h2>Inscripcion a curso</h2>
+    <form method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre">
+        <br><br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido">
+        <br><br>
+        <label for="curso">Curso:</label>
+        <select name="curso">
+            <option value="Python">Python</option>    
+            <option value="C++">C++</option>
+            <option value="JavaScript">JavaScript</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Enviar">    
+    </form>
+    {% endblock %}
+</body>
+</html>

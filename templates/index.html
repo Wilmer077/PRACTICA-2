@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Principal</title>
+</head>
+<body>
+    <h1>Menú de Formularios</h1>
+    <ul>
+        <li><a href="{{ url_for('inscripcion') }}">Inscripción en Curso</a></li>
+        <li><a href="{{ url_for('registro_usuarios') }}">Registro de Usuarios</a></li>
+        <li><a href="{{ url_for('registro_productos') }}">Registro de Productos</a></li>
+        <li><a href="{{ url_for('registro_libros') }}">Registro de Libros</a></li>
+    </ul>
+    <a href="{{ url_for('mostrar') }}">Mostrar Datos Recibidos</a>
+</body>
+</html>
